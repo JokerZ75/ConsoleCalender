@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\CalenderConsole.csproj",
+      "projectUniqueName": "D:\\Assignment\\CalenderConsole\\CalenderConsole.csproj",
       "projectName": "CalenderConsole",
-      "projectPath": "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\CalenderConsole.csproj",
+      "projectPath": "D:\\Assignment\\CalenderConsole\\CalenderConsole.csproj",
       "packagesPath": "C:\\Users\\dhugh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\obj\\",
+      "outputPath": "D:\\Assignment\\CalenderConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

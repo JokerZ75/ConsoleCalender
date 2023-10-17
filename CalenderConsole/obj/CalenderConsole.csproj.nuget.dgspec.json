@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\CalenderConsole.csproj": {}
+    "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\CalenderConsole.csproj": {
+    "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\CalenderConsole.csproj",
+        "projectUniqueName": "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj",
         "projectName": "CalenderConsole",
-        "projectPath": "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\CalenderConsole.csproj",
+        "projectPath": "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj",
         "packagesPath": "C:\\Users\\dhugh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhugh\\OneDrive - Sheffield Hallam University\\Uni Work\\Year 2\\System Programming\\Assignment\\CalenderConsole\\obj\\",
+        "outputPath": "D:\\Assignment\\calenderConsole\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
