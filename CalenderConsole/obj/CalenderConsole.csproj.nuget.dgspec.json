@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj": {}
+    "D:\\Assignment\\calenderconsole\\CalenderConsole.csproj": {}
   },
   "projects": {
-    "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj": {
+    "D:\\Assignment\\calenderconsole\\CalenderConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj",
+        "projectUniqueName": "D:\\Assignment\\calenderconsole\\CalenderConsole.csproj",
         "projectName": "CalenderConsole",
-        "projectPath": "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj",
+        "projectPath": "D:\\Assignment\\calenderconsole\\CalenderConsole.csproj",
         "packagesPath": "C:\\Users\\dhugh\\.nuget\\packages\\",
-        "outputPath": "D:\\Assignment\\calenderConsole\\obj\\",
+        "outputPath": "D:\\Assignment\\calenderconsole\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
