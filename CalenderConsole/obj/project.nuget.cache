@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KEPmd/AI8jgS/nE7mSBbJVvwlm2dPAVZ0VhSqZkZEVnk9q6EHGcNKyTr2kZCWM6A63fi3el3CVVUuUjMLNIQFw==",
+  "dgSpecHash": "7yRACrMcB0j5xo8LXjAE3vKTuG8d2sVquHpaYEPQQ7a40dTFfOF0MxAQfTPs/xBAwK/7PuocTu5XCS2Ms8mguQ==",
   "success": true,
-  "projectFilePath": "D:\\Assignment\\calenderConsole\\CalenderConsole.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/CalenderConsole.csproj",
+  "expectedPackageFiles": [
+    "/Users/deaconhughes/.nuget/packages/microsoft.netcore.app.ref/7.0.11/microsoft.netcore.app.ref.7.0.11.nupkg.sha512",
+    "/Users/deaconhughes/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.11/microsoft.aspnetcore.app.ref.7.0.11.nupkg.sha512",
+    "/Users/deaconhughes/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.11/microsoft.netcore.app.host.osx-arm64.7.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,12 +1,36 @@
-﻿Calender cal = new Calender();
+﻿using System.Runtime.InteropServices;
 
-string[] daysInMonth = new string[31];
-for (int i = 0; i < 31; i++)
+void selectDate(Calender cal)
 {
-    daysInMonth[i] = (i + 1).ToString();
+    ConsoleDisplay.DaysInMonthSelection(cal);
 }
 
-int option = ConsoleDisplay.DaysInMonth(daysInMonth);
-Console.WriteLine(option);
 
-ConsoleDisplay.DisplayCalender(cal);
+Calender cal = new Calender();
+Dictionary<string, Action> actions = new Dictionary<string, Action>(){
+    {"Previous Year", cal.PreviousYear},
+    {"Select Date", () => selectDate(cal)},
+    {"Next Year", cal.NextYear},
+    {"Previous Month", cal.PreviousMonth},
+    {"Return To Current", cal.SelectCurrentDate},
+    {"Next Month", cal.NextMonth},
+    {"Exit", () => Environment.Exit(0)}
+
+};
+string choice = "";
+int lastSelected = 0;
+
+while (true)
+{
+    try
+    {
+        ConsoleDisplay.DisplayCalender(cal);
+        choice = ConsoleDisplay.DisplayCalenderOptions(actions, lastSelected);
+        lastSelected = actions.Keys.ToList().IndexOf(choice);
+        actions[choice]();
+    }
+    catch
+    {
+        Console.WriteLine("Invalid input");
+    }
+}

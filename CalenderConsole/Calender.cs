@@ -1,6 +1,5 @@
 class Calender
 {
-
     Dictionary<int, Year> _years = new Dictionary<int, Year>();
 
     Year _currentYear;
@@ -94,6 +93,11 @@ class Calender
         {
             _currentMonth = _currentYear.monthsOfYear[_currentMonth.monthNumber - 1];
         }
+    }
+
+    public void SelectCurrentDate(){
+        _currentYear = _years[DateTime.Now.Year];
+        _currentMonth = _currentYear.monthsOfYear[DateTime.Now.Month];
     }
 
 

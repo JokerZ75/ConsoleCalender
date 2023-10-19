@@ -1,28 +1,43 @@
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.exe
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.deps.json
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.runtimeconfig.json
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.dll
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.pdb
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.AssemblyInfoInputs.cache
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.AssemblyInfo.cs
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.csproj.CoreCompileInputs.cache
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.dll
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\refint\CalenderConsole.dll
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.pdb
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.genruntimeconfig.cache
-C:\Users\dhugh\OneDrive - Sheffield Hallam University\Uni Work\Year 2\System Programming\Assignment\calenderConsole\obj\Debug\net7.0\ref\CalenderConsole.dll
-D:\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.exe
-D:\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.deps.json
-D:\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.runtimeconfig.json
-D:\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.dll
-D:\Assignment\calenderConsole\bin\Debug\net7.0\CalenderConsole.pdb
-D:\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.GeneratedMSBuildEditorConfig.editorconfig
-D:\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.AssemblyInfoInputs.cache
-D:\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.AssemblyInfo.cs
-D:\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.csproj.CoreCompileInputs.cache
-D:\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.dll
-D:\Assignment\calenderConsole\obj\Debug\net7.0\refint\CalenderConsole.dll
-D:\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.pdb
-D:\Assignment\calenderConsole\obj\Debug\net7.0\CalenderConsole.genruntimeconfig.cache
-D:\Assignment\calenderConsole\obj\Debug\net7.0\ref\CalenderConsole.dll
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.exe
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.deps.json
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.runtimeconfig.json
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.dll
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.pdb
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.AssemblyInfoInputs.cache
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.AssemblyInfo.cs
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.csproj.CoreCompileInputs.cache
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.dll
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/refint/CalenderConsole.dll
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.pdb
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.genruntimeconfig.cache
+C:/Users/dhugh/OneDrive - Sheffield Hallam University/Uni Work/Year 2/System Programming/Assignment/calenderConsole/obj/Debug/net7.0/ref/CalenderConsole.dll
+D:/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.exe
+D:/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.deps.json
+D:/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.runtimeconfig.json
+D:/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.dll
+D:/Assignment/calenderConsole/bin/Debug/net7.0/CalenderConsole.pdb
+D:/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.GeneratedMSBuildEditorConfig.editorconfig
+D:/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.AssemblyInfoInputs.cache
+D:/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.AssemblyInfo.cs
+D:/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.csproj.CoreCompileInputs.cache
+D:/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.dll
+D:/Assignment/calenderConsole/obj/Debug/net7.0/refint/CalenderConsole.dll
+D:/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.pdb
+D:/Assignment/calenderConsole/obj/Debug/net7.0/CalenderConsole.genruntimeconfig.cache
+D:/Assignment/calenderConsole/obj/Debug/net7.0/ref/CalenderConsole.dll
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/bin/Debug/net7.0/CalenderConsole
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/bin/Debug/net7.0/CalenderConsole.deps.json
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/bin/Debug/net7.0/CalenderConsole.runtimeconfig.json
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/bin/Debug/net7.0/CalenderConsole.dll
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/bin/Debug/net7.0/CalenderConsole.pdb
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.AssemblyInfoInputs.cache
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.AssemblyInfo.cs
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.csproj.CoreCompileInputs.cache
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.sourcelink.json
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.dll
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/refint/CalenderConsole.dll
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.pdb
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/CalenderConsole.genruntimeconfig.cache
+/Users/deaconhughes/Personal Projects/Assignment-Work/ConsoleCalender/CalenderConsole/obj/Debug/net7.0/ref/CalenderConsole.dll
