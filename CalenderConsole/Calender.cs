@@ -49,11 +49,13 @@ class Calender
         if (_years.ContainsKey(_currentYear.yearNumber + 1))
         {
             _currentYear = _years[_currentYear.yearNumber + 1];
+            _currentMonth = _currentYear.monthsOfYear[_currentMonth.monthNumber];
         }
         else
         {
             _years.Add(_currentYear.yearNumber + 1, new Year(_currentYear.yearNumber + 1));
             _currentYear = _years[_currentYear.yearNumber + 1];
+            _currentMonth = _currentYear.monthsOfYear[_currentMonth.monthNumber];
         }
     }
     public void PreviousYear()
@@ -61,11 +63,13 @@ class Calender
         if (_years.ContainsKey(_currentYear.yearNumber - 1))
         {
             _currentYear = _years[_currentYear.yearNumber - 1];
+            _currentMonth = _currentYear.monthsOfYear[_currentMonth.monthNumber];
         }
         else
         {
             _years.Add(_currentYear.yearNumber - 1, new Year(_currentYear.yearNumber - 1));
             _currentYear = _years[_currentYear.yearNumber - 1];
+            _currentMonth = _currentYear.monthsOfYear[_currentMonth.monthNumber];
         }
     }
 
@@ -103,12 +107,13 @@ class Calender
 
     public void AddEvent(int day, string name, string description)
     {
-        _currentMonth.daysOfMonth[day].AddEvent(name, description);
+      _currentMonth.daysOfMonth[day].AddEvent(name, description);
     }
 
     public void RemoveEvent(int day, Event eventToRemove)
     {
         _currentMonth.daysOfMonth[day].RemoveEvent(eventToRemove);
     }
+
 
 }
