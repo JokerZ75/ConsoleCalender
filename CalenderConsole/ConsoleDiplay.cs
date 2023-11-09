@@ -52,6 +52,9 @@ class ConsoleDisplay
                     break;
                 case ConsoleKey.Enter:
                     break;
+                case ConsoleKey.Escape:
+                    selected = -1;
+                    return selected;
                 default:
                     break;
             }
@@ -147,6 +150,9 @@ class ConsoleDisplay
                     break;
                 case ConsoleKey.Enter:
                     break;
+                case ConsoleKey.Escape:
+                    selected = -1;
+                    break;
                 default:
                     break;
             }
@@ -228,11 +234,13 @@ class ConsoleDisplay
         string[] options = events.Values.Select(e => $"{e.name} - {e.description}").ToArray();
 
         selected = MovementOptions(selected, numberOptionsPerLine, options.Length, lineSpacing, startY, options);
+        if (selected == -1)
+        {
+            return null;
+        }
         return events[options[selected].Split('-')[0].Trim()];
     }
 
 }
-// Test change
-
 
 
