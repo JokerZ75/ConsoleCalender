@@ -16,6 +16,18 @@ class Day
 
     List<Event> _eventsOfDay = new List<Event>();
 
+    public List<Event> eventsOfDay
+    {
+        get
+        {
+            return _eventsOfDay;
+        }
+        set
+        {
+            _eventsOfDay = value;
+        }
+    }
+
     public Day(int dayOfMonth)
     {
          _dayOfMonth = dayOfMonth;
@@ -30,6 +42,11 @@ class Day
     public void RemoveEvent(Event eventToRemove)
     {
         _eventsOfDay.Remove(eventToRemove);
+    }
+
+    public bool hasEvents()
+    {
+        return _eventsOfDay.Count > 0;
     }
 
     public override string ToString()
