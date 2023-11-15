@@ -1,5 +1,48 @@
-﻿using System.Runtime.InteropServices;
+﻿Calender cal = new Calender();
+Dictionary<string, Action> actions = new Dictionary<string, Action>(){
+    {"Previous Year", cal.PreviousYear},
+    {"Select Date", () => selectDate(cal)},
+    {"Next Year", cal.NextYear},
+    {"Previous Month", cal.PreviousMonth},
+    {"Return To Current", cal.SelectCurrentDate},
+    {"Next Month", cal.NextMonth},
+    {"Exit", () => Environment.Exit(0)}
 
+};
+string choice = "";
+int lastSelected = 0;
+cal.AddEvent(2, "Test", "Test Description");
+
+while (true)
+{
+    try
+    {
+        ConsoleDisplay.DisplayCalender(cal);
+        choice = ConsoleDisplay.DisplayCalenderOptions(actions, lastSelected);
+    }
+    // Catch for if console too small
+    catch (ArgumentOutOfRangeException e)
+    {
+        // hacky way to clear console because need to as would only be called if console too small once its already writing to console
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Console too small. Please resize and try again.");
+        Console.ResetColor();
+        return;
+    }
+    catch (Exception e)
+    {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Error occured. Message: " + e.Message);
+        Console.ResetColor();
+        return;
+    }
+    lastSelected = actions.Keys.ToList().IndexOf(choice);
+    actions[choice]();
+
+
+}
 
 (string, string) CreateEvent()
 {
@@ -25,6 +68,13 @@
 void selectDate(Calender cal)
 {
     int selectDate = ConsoleDisplay.DaysInMonthSelection(cal);
+    if (selectDate == -1) return; // Pressed escape
+
+    // Format the selected date to be displayed
+    string selectDateStr = selectDate.ToString();
+    if (selectDate < 10) selectDateStr = "0" + selectDateStr;
+
+
     // These are the actions that can be taken on a selected date
     Dictionary<string, Action> actions = new Dictionary<string, Action>(){
         {"Add Event", () => {
@@ -53,50 +103,31 @@ void selectDate(Calender cal)
     {
         try
         {
-            ConsoleDisplay.DisplayCalender(cal);
+            ConsoleDisplay.DisplayCalender(cal); Console.WriteLine($"\nSelected Date: {selectDateStr}-{cal.currentMonth}-{cal.currentYear}\n");
             choice = ConsoleDisplay.DisplayCalenderOptions(actions, lastSelected);
-            Console.WriteLine($"\nSelected Date: {selectDate}");
-            lastSelected = actions.Keys.ToList().IndexOf(choice);
-            if (choice == "Return To Calender")
-            {
-                break;
-            }
-            actions[choice]();
         }
-        catch
+        // Catch for if console too small
+        catch (ArgumentOutOfRangeException e)
         {
-            Console.WriteLine("Invalid input");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Console too small. Please resize and try again.");
+            Console.ResetColor();
+            return;
         }
-    }
-}
-
-
-Calender cal = new Calender();
-Dictionary<string, Action> actions = new Dictionary<string, Action>(){
-    {"Previous Year", cal.PreviousYear},
-    {"Select Date", () => selectDate(cal)},
-    {"Next Year", cal.NextYear},
-    {"Previous Month", cal.PreviousMonth},
-    {"Return To Current", cal.SelectCurrentDate},
-    {"Next Month", cal.NextMonth},
-    {"Exit", () => Environment.Exit(0)}
-
-};
-string choice = "";
-int lastSelected = 0;
-cal.AddEvent(2, "Test", "Test Description");
-
-while (true)
-{
-    try
-    {
-        ConsoleDisplay.DisplayCalender(cal);
-        choice = ConsoleDisplay.DisplayCalenderOptions(actions, lastSelected);
+        catch (Exception e)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Error occured. Message: " + e.Message);
+            Console.ResetColor();
+            return;
+        }
+        if (choice == "Return To Calender" || lastSelected == -1)
+        {
+            break;
+        }
         lastSelected = actions.Keys.ToList().IndexOf(choice);
         actions[choice]();
-    }
-    catch
-    {
-        Console.WriteLine("Invalid input");
     }
 }

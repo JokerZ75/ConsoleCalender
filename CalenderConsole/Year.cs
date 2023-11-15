@@ -7,10 +7,6 @@ class Year{
         {
             return _yearNumber;
         }
-        set
-        {
-            _yearNumber = value;
-        }
     }
 
     Dictionary<int, Month> _monthsOfYear = new Dictionary<int, Month>();
@@ -20,10 +16,7 @@ class Year{
         {
             return _monthsOfYear;
         }
-        set
-        {
-            _monthsOfYear = value;
-        }
+
     }
 
     public Year(int yearNumber)

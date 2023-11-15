@@ -8,10 +8,6 @@ class Day
         {
             return _dayOfMonth;
         }
-        set
-        {
-            _dayOfMonth = value;
-        }
     }
 
     List<Event> _eventsOfDay = new List<Event>();
@@ -21,10 +17,6 @@ class Day
         get
         {
             return _eventsOfDay;
-        }
-        set
-        {
-            _eventsOfDay = value;
         }
     }
 
@@ -51,7 +43,14 @@ class Day
 
     public override string ToString()
     {
-        return dayOfMonth.ToString();
+        if (dayOfMonth < 10)
+        {
+            return string.Format("0{0}", dayOfMonth);
+        }
+        else
+        {
+            return dayOfMonth.ToString();
+        }
     }
 
 }

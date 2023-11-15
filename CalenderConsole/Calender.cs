@@ -9,10 +9,6 @@ class Calender
         {
             return _currentYear;
         }
-        set
-        {
-            _currentYear = value;
-        }
     }
 
     Month _currentMonth;
@@ -22,16 +18,12 @@ class Calender
         {
             return _currentMonth;
         }
-        set
-        {
-            _currentMonth = value;
-        }
     }
 
 
     public Calender()
     {
-        GenerateYears(DateTime.Now.Year - 10, DateTime.Now.Year + 10);
+        GenerateYears(DateTime.Now.Year - 5, DateTime.Now.Year + 5);
         _currentYear = _years[DateTime.Now.Year];
         _currentMonth = _currentYear.monthsOfYear[DateTime.Now.Month];
     }
@@ -44,6 +36,20 @@ class Calender
         }
     }
 
+    Year GenerateNextYear()
+    {
+        int lastYear = _years.Keys.Max();
+        _years.Add(lastYear + 1, new Year(lastYear + 1));
+        return _years[lastYear + 1];
+    }
+
+    Year GeneratePreviousYear()
+    {
+        int firstYear = _years.Keys.Min();
+        _years.Add(firstYear - 1, new Year(firstYear - 1));
+        return _years[firstYear - 1];
+    }
+
     public void NextYear()
     {
         if (_years.ContainsKey(_currentYear.yearNumber + 1))
@@ -53,8 +59,7 @@ class Calender
         }
         else
         {
-            _years.Add(_currentYear.yearNumber + 1, new Year(_currentYear.yearNumber + 1));
-            _currentYear = _years[_currentYear.yearNumber + 1];
+            _currentYear = GenerateNextYear();
             _currentMonth = _currentYear.monthsOfYear[_currentMonth.monthNumber];
         }
     }
@@ -67,8 +72,7 @@ class Calender
         }
         else
         {
-            _years.Add(_currentYear.yearNumber - 1, new Year(_currentYear.yearNumber - 1));
-            _currentYear = _years[_currentYear.yearNumber - 1];
+            _currentYear = GeneratePreviousYear();
             _currentMonth = _currentYear.monthsOfYear[_currentMonth.monthNumber];
         }
     }
@@ -114,6 +118,11 @@ class Calender
     {
         _currentMonth.daysOfMonth[day].RemoveEvent(eventToRemove);
     }
+
+    // public Dictionary<string, Event> GetEventsOfDay(int day)
+    // {
+    //     return _currentMonth.daysOfMonth[day].eventsOfDay;
+    // }
 
 
 }

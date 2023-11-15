@@ -2,7 +2,7 @@
 class ConsoleDisplay
 {
 
-    static int MovementOptions(int selected, int numberOptionsPerLine, int optionsLength, int lineSpacing, int startY, string[] options)
+    static int MovementOptions(int selected, int numberOptionsPerLine, int lineSpacing, int startY, string[] options)
     {
         ConsoleKey key;
         do
@@ -152,7 +152,7 @@ class ConsoleDisplay
                     break;
                 case ConsoleKey.Escape:
                     selected = -1;
-                    break;
+                    return selected;
                 default:
                     break;
             }
@@ -215,7 +215,7 @@ class ConsoleDisplay
         Console.CursorVisible = false;
         string[] options = actions.Keys.ToArray();
 
-        selected = MovementOptions(selected, numberOptionsPerLine, options.Length, lineSpacing, startY, options);
+        selected = MovementOptions(selected, numberOptionsPerLine, lineSpacing, startY, options);
 
 
         Console.CursorVisible = true;
@@ -233,7 +233,7 @@ class ConsoleDisplay
         Console.CursorVisible = false;
         string[] options = events.Values.Select(e => $"{e.name} - {e.description}").ToArray();
 
-        selected = MovementOptions(selected, numberOptionsPerLine, options.Length, lineSpacing, startY, options);
+        selected = MovementOptions(selected, numberOptionsPerLine, lineSpacing, startY, options);
         if (selected == -1)
         {
             return null;

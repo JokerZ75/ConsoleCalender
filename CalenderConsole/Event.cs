@@ -8,10 +8,6 @@ class Event
         {
             return _name;
         }
-        set
-        {
-            _name = value;
-        }
     }
 
     string _description;
@@ -20,10 +16,6 @@ class Event
         get
         {
             return _description;
-        }
-        set
-        {
-            _name = value;
         }
     }
     public Event( string name, string description)

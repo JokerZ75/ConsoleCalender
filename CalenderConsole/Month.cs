@@ -6,10 +6,6 @@ class Month {
         {
             return _daysOfMonth;
         }
-        set
-        {
-            _daysOfMonth = value;
-        }
     }
 
     int _monthNumber;
@@ -18,10 +14,6 @@ class Month {
         get
         {
             return _monthNumber;
-        }
-        set
-        {
-            _monthNumber = value;
         }
     }
 
@@ -38,7 +30,14 @@ class Month {
 
     public override string ToString()
     {
-        return monthNumber.ToString();
+        if (monthNumber < 10)
+        {
+            return string.Format("0{0}", monthNumber);
+        }
+        else
+        {
+            return monthNumber.ToString();
+        }
     }
 
 }
