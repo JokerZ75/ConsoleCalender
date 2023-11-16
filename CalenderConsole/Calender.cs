@@ -3,7 +3,7 @@ class Calender
     Dictionary<int, Year> _years = new Dictionary<int, Year>();
 
     Year _currentYear;
-    public Year currentYear
+    public Year CurrentYear
     {
         get
         {
@@ -12,7 +12,7 @@ class Calender
     }
 
     Month _currentMonth;
-    public Month currentMonth
+    public Month CurrentMonth
     {
         get
         {
@@ -103,7 +103,8 @@ class Calender
         }
     }
 
-    public void SelectCurrentDate(){
+    public void SelectCurrentDate()
+    {
         _currentYear = _years[DateTime.Now.Year];
         _currentMonth = _currentYear.monthsOfYear[DateTime.Now.Month];
     }
@@ -111,7 +112,7 @@ class Calender
 
     public void AddEvent(int day, string name, string description)
     {
-      _currentMonth.daysOfMonth[day].AddEvent(name, description);
+        _currentMonth.daysOfMonth[day].AddEvent(name, description);
     }
 
     public void RemoveEvent(int day, Event eventToRemove)
@@ -119,10 +120,56 @@ class Calender
         _currentMonth.daysOfMonth[day].RemoveEvent(eventToRemove);
     }
 
-    // public Dictionary<string, Event> GetEventsOfDay(int day)
-    // {
-    //     return _currentMonth.daysOfMonth[day].eventsOfDay;
-    // }
+    public List<Event> GetEventsOfDay(int day)
+    {
+        return _currentMonth.daysOfMonth[day].eventsOfDay;
+    }
+
+    public Dictionary<string, List<Event>> GetEventsOfMonth()
+    {
+        Dictionary<string, List<Event>> events = new Dictionary<string, List<Event>>();
+        foreach (Day day in _currentMonth.daysOfMonth.Values)
+        {
+            foreach (Event e in day.eventsOfDay)
+            {
+                if (events.ContainsKey(day.dayOfMonth.ToString()))
+                {
+                    events["day " + day.dayOfMonth.ToString()].Add(e);
+                }
+                else
+                {
+                    events.Add("day " + day.dayOfMonth.ToString(), new List<Event>() { e });
+                }
+            }
+        }
+        return events;
+    }
+
+    public Dictionary<string, List<Event>> GetEventsOfYear()
+    {
+        Dictionary<string, List<Event>> events = new Dictionary<string, List<Event>>();
+        foreach (Month month in _currentYear.monthsOfYear.Values) // Gross nested loops but it works
+        {
+            foreach (Day day in month.daysOfMonth.Values)
+            {
+                foreach (Event e in day.eventsOfDay)
+                {
+                    if (events.ContainsKey($"{month.monthNumber}-{day.dayOfMonth}"))
+                    {
+                        events[$"day {day.dayOfMonth} of month {month.monthNumber}"].Add(e);
+                    }
+                    else
+                    {
+                        events.Add($"day {day.dayOfMonth} of month {month.monthNumber}", new List<Event>() { e });
+                    }
+                }
+            }
+
+        }
+        return events;
+    }
+
+
 
 
 }

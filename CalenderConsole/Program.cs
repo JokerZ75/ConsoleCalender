@@ -1,4 +1,6 @@
-﻿Calender cal = new Calender();
+﻿
+
+Calender cal = new Calender();
 Dictionary<string, Action> actions = new Dictionary<string, Action>(){
     {"Previous Year", cal.PreviousYear},
     {"Select Date", () => selectDate(cal)},
@@ -6,6 +8,8 @@ Dictionary<string, Action> actions = new Dictionary<string, Action>(){
     {"Previous Month", cal.PreviousMonth},
     {"Return To Current", cal.SelectCurrentDate},
     {"Next Month", cal.NextMonth},
+    {"Events Of Month", () =>  ConsoleDisplay.DisplayEventsInListWithDates(cal.GetEventsOfMonth(), $"{cal.CurrentMonth}-{cal.CurrentYear}")},
+    {"Events Of Year", () => ConsoleDisplay.DisplayEventsInListWithDates(cal.GetEventsOfYear(), $"{cal.CurrentYear}")},
     {"Exit", () => Environment.Exit(0)}
 
 };
@@ -38,8 +42,8 @@ while (true)
         Console.ResetColor();
         return;
     }
-    lastSelected = actions.Keys.ToList().IndexOf(choice);
-    actions[choice]();
+    lastSelected = actions.Keys.ToList().IndexOf(choice); // saves the last selected option
+    actions[choice](); // runs a function from the dictionary
 
 
 }
@@ -69,12 +73,9 @@ void selectDate(Calender cal)
 {
     int selectDate = ConsoleDisplay.DaysInMonthSelection(cal);
     if (selectDate == -1) return; // Pressed escape
-
     // Format the selected date to be displayed
     string selectDateStr = selectDate.ToString();
     if (selectDate < 10) selectDateStr = "0" + selectDateStr;
-
-
     // These are the actions that can be taken on a selected date
     Dictionary<string, Action> actions = new Dictionary<string, Action>(){
         {"Add Event", () => {
@@ -84,13 +85,16 @@ void selectDate(Calender cal)
         {
             "Remove Event", () => {
                 Dictionary<string, Event> events = new Dictionary<string, Event>();
-                cal.currentMonth.daysOfMonth[selectDate].eventsOfDay.ForEach((Event e) => {
+                cal.CurrentMonth.daysOfMonth[selectDate].eventsOfDay.ForEach((Event e) => { // convert to dictonary for easier selection
                     events.Add(e.name, e);
                 });
                 ConsoleDisplay.DisplayCalender(cal);
                 Event eventToDelete = ConsoleDisplay.SelectEventToDelete(events);
                 cal.RemoveEvent(selectDate, eventToDelete);
             }
+        },
+        {
+            "List Events", () => ConsoleDisplay.DisplayEventsInList(cal.GetEventsOfDay(selectDate), $"{selectDateStr}-{cal.CurrentMonth}-{cal.CurrentYear}")
         },
         {"Return To Calender", () => {
         }}
@@ -103,7 +107,7 @@ void selectDate(Calender cal)
     {
         try
         {
-            ConsoleDisplay.DisplayCalender(cal); Console.WriteLine($"\nSelected Date: {selectDateStr}-{cal.currentMonth}-{cal.currentYear}\n");
+            ConsoleDisplay.DisplayCalender(cal); Console.WriteLine($"\nSelected Date: {selectDateStr}-{cal.CurrentMonth}-{cal.CurrentYear}\n");
             choice = ConsoleDisplay.DisplayCalenderOptions(actions, lastSelected);
         }
         // Catch for if console too small

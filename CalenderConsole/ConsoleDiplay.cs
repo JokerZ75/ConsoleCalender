@@ -2,7 +2,7 @@
 class ConsoleDisplay
 {
 
-    static int MovementOptions(int selected, int numberOptionsPerLine, int lineSpacing, int startY, string[] options)
+    static int MovementOptions(int selected, int numberOptionsPerLine, int optionsLength, int lineSpacing, int startY, string[] options)
     {
         ConsoleKey key;
         do
@@ -74,8 +74,8 @@ class ConsoleDisplay
         ConsoleKey key;
         Console.CursorVisible = false;
 
-        Year year = calender.currentYear;
-        Month month = calender.currentMonth;
+        Year year = calender.CurrentYear;
+        Month month = calender.CurrentMonth;
         DateTime date = new DateTime(year.yearNumber, month.monthNumber, 1);
         int dayOfWeek = (int)date.DayOfWeek;
         if (dayOfWeek == 0)
@@ -152,7 +152,7 @@ class ConsoleDisplay
                     break;
                 case ConsoleKey.Escape:
                     selected = -1;
-                    return selected;
+                    break;
                 default:
                     break;
             }
@@ -165,17 +165,12 @@ class ConsoleDisplay
 
     public static void DisplayCalender(Calender calender)
     {
-        // Display calender in this format
-        // --------------------- currentYear -------------------
-        //
-        // --------------------- currentMonth ------------------
-        // days of month with spacing
         int lineSpacing = 8;
         int numberOptionsPerLine = 7;
         int startY = 4;
         Console.Clear();
-        Year year = calender.currentYear;
-        Month month = calender.currentMonth;
+        Year year = calender.CurrentYear;
+        Month month = calender.CurrentMonth;
         DateTime date = new DateTime(year.yearNumber, month.monthNumber, 1);
         int dayOfWeek = (int)date.DayOfWeek;
         if (dayOfWeek == 0)
@@ -215,7 +210,7 @@ class ConsoleDisplay
         Console.CursorVisible = false;
         string[] options = actions.Keys.ToArray();
 
-        selected = MovementOptions(selected, numberOptionsPerLine, lineSpacing, startY, options);
+        selected = MovementOptions(selected, numberOptionsPerLine, options.Length, lineSpacing, startY, options);
 
 
         Console.CursorVisible = true;
@@ -233,7 +228,7 @@ class ConsoleDisplay
         Console.CursorVisible = false;
         string[] options = events.Values.Select(e => $"{e.name} - {e.description}").ToArray();
 
-        selected = MovementOptions(selected, numberOptionsPerLine, lineSpacing, startY, options);
+        selected = MovementOptions(selected, numberOptionsPerLine, options.Length, lineSpacing, startY, options);
         if (selected == -1)
         {
             return null;
@@ -241,6 +236,38 @@ class ConsoleDisplay
         return events[options[selected].Split('-')[0].Trim()];
     }
 
+
+    public static void DisplayEventsInList(List<Event> events, string date)
+    {
+        Console.Clear();
+        Console.WriteLine(date);
+        Console.WriteLine();
+        foreach (Event e in events)
+        {
+            Console.WriteLine(e.ToString() + "\n");
+        }
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey(true);
+    }
+
+    public static void DisplayEventsInListWithDates(Dictionary<string, List<Event>> events, string date)
+    {
+        Console.Clear();
+        Console.WriteLine(date);
+        Console.WriteLine();
+        foreach (KeyValuePair<string, List<Event>> e in events)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Date: {e.Key} has {e.Value.Count} events\n");
+            Console.ResetColor();
+            foreach (Event ev in e.Value)
+            {
+                Console.WriteLine(ev.ToString() + "\n");
+            }
+        }
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey(true);
+    }
 }
 
 
